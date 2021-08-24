@@ -36,7 +36,7 @@
 		
 		<!-- Main CSS -->
         <link rel="stylesheet" href="{{asset('myfiles/css/style.css')}}">
-<script src="{{asset('jquery/dist/jquery.min.js')}}"></script>
+<!-- <script src="{{asset('jquery/dist/jquery.min.js')}}"></script> -->
  <link href="{{asset('myfiles/css/toastr.min.css')}}" rel="stylesheet"/>
         @yield('extracss')
 		
@@ -86,8 +86,8 @@
 		  @stack('scripts')
 
 
-		   <script src="{{asset('myfiles/js/jquery-3.5.1.min.js')}}"></script>
-       <script src="{{asset('myfiles/js/jquery-3.2.1.min.js')}}"></script> 
+		<!--    <script src="{{asset('myfiles/js/jquery-3.5.1.min.js')}}"></script>
+       <script src="{{asset('myfiles/js/jquery-3.2.1.min.js')}}"></script> --> 
 	
 		 
 		<!-- Bootstrap Core JS -->

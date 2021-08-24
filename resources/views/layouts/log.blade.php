@@ -8,7 +8,7 @@
 		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
         <meta name="author" content="Dreamguys - Bootstrap Admin Template">
         <meta name="robots" content="noindex, nofollow">
-        <title>Uplifted Care Services</title>
+        <title>Avrello</title>
 		
 		<!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="myfiles/img/favicon.png">
@@ -44,7 +44,7 @@
 					
 					<div class="account-box">
 						<div class="account-wrapper">
-							<h3 class="account-title"><img src="{{asset('images/logo.jpg')}}" alt="" width="50%"></h3>
+							<h3 class="account-title"><img src="{{asset('images/logo.png')}}" alt="" width="50%"></h3>
 							<p class="account-subtitle">Access to our dashboard</p>
 							
 							<!-- Account Form -->
