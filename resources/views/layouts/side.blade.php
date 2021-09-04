@@ -31,7 +31,7 @@
 							<li class="submenu">
 								<a href="#" ><i class="fa fa-files-o"></i> <span> Reports Portal </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="{{url('#')}}">Donations By Persons</a></li>
+									<li><a href="{{url('#')}}">Donations Report</a></li>
 
 									<!-- <li><a href="{{url('admin/task')}}">View Documents</a></li>		
 

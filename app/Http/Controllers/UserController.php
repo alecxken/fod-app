@@ -200,8 +200,8 @@ class UserController extends Controller
             'password' => Hash::make($request['password']),
         ]);
          // $user->fill($input)->save();
-            $success['token'] =  $user->createToken('MyAuthApp')->plainTextToken;
-        $success['name'] =  $user->name;
+        //     $success['token'] =  $user->createToken('MyAuthApp')->plainTextToken;
+        // $success['name'] =  $user->name;
           foreach ($roles as $role)
            {
                  $rol = Role::where('name', '=', $role)->first();

@@ -52,10 +52,10 @@ Route::get('/admin', [UserController::class, 'viewroles'])->name('user.roles');
   
 #Cash Disbursement Routes Begins Here
 
-Route::get('new-company',[CompanyController::class,'create']);
+Route::get('company-new',[CompanyController::class,'create']);
 
-Route::post('store_disburse',[CompanyController::class,'store'])->name('store-disbursement');
+Route::post('store_company',[CompanyController::class,'store'])->name('store-company');
 
-Route::get('get-cashdis',[CompanyController::class,'cashdis'])->name('cashdis.index');;
+Route::get('get-cashdis',[CompanyController::class,'cashdis'])->name('ngo.index');;
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
