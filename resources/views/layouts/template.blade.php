@@ -40,11 +40,7 @@
  <link href="{{asset('myfiles/css/toastr.min.css')}}" rel="stylesheet"/>
         @yield('extracss')
 		
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-			<script src="myfiles/js/html5shiv.min.js"></script>
-			<script src="myfiles/js/respond.min.js"></script>
-		<![endif]-->
+		
     </head>
 	
     <body>

@@ -6,6 +6,9 @@ use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\UserController;
 
+use App\Http\Controllers\ContentController;
+
+
 use App\Http\Controllers\CompanyController;
 /*
 |--------------------------------------------------------------------------
@@ -35,10 +38,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/admin', [UserController::class, 'viewroles'])->name('user.roles');
 
-  Route::post('/users_update', [UserController::class, 'user_update'])->name('user.update');
-  Route::post('/store-users', [UserController::class, 'user_store'])->name('store.users');
+    Route::post('/users_update', [UserController::class, 'user_update'])->name('user.update');
 
-  
+    Route::post('/store-users', [UserController::class, 'user_store'])->name('store.users');   
 
     Route::post('/roles_store', [UserController::class, 'roles_store'])->name('roles.store');
 
@@ -59,3 +61,12 @@ Route::post('store_company',[CompanyController::class,'store'])->name('store-com
 Route::get('get-cashdis',[CompanyController::class,'cashdis'])->name('ngo.index');;
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+
+Route::get('news-upload',[ContentController::class,'news']);
+Route::get('news-view/{id}',[ContentController::class,'view']);
+Route::get('news-drop/{id}',[ContentController::class,'drop']);
+Route::get('news-content',[ContentController::class,'content'])->name('ekecontent.index');;
+Route::post('store-news',[ContentController::class,'store']);

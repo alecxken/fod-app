@@ -35,4 +35,9 @@ class CompanyController extends Controller
                     </div>';
         })->make(true);
 	    }
+
+	    public function store(Request $Request)
+	    {
+	    	
+	    }
 }

@@ -1,0 +1,49 @@
+	<div class="row">
+                    	 @if(!empty($collection))
+										@foreach ($collection as $file)
+											     	@if ($file->department == $dept)
+					
+						<div class="col-12 col-md-2">
+																<div class="card card-file">
+																	<div class="dropdown-file">
+																		<a href="" class="dropdown-link" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></a>
+																		<div class="dropdown-menu dropdown-menu-right">
+																			{{-- <a href="#" class="dropdown-item">View Details</a> --}}
+																			<a href="#" class="dropdown-item">Share</a>
+																			<a href="{{url('content-file/'.$file->id)}}" class="dropdown-item">View Content</a>
+																			{{-- <a href="#" class="dropdown-item">Rename</a> --}}
+																			{{--  --}}
+																		</div>
+																	</div>
+																	<div class="card-file-thumb">
+                                                                        @if($file->type == 'docx')
+																		<i class="fa fa-file-word-o"></i>
+                                                                        @elseif($file->type == 'txt')
+                                                                        <i class="fa fa-file-text-o"></i>
+                                                                        @elseif($file->type == 'pdf')
+                                                                        <i class="fa fa-file-pdf-o"></i>
+                                                                        @elseif($file->type == 'ppt')
+                                                                        <i class="fa fa-file-powerpoint-o"></i>
+                                                                        @elseif($file->type == 'mp3')
+                                                                        <i class="fa fa-file-audio-o"></i>
+                                                                         @elseif($file->type == 'mp4')
+                                                                        <i class="fa fa-file-video-o"></i>
+                                                                        @elseif($file->type == 'xls')
+                                                                        <i class="fa fa-file-excel-o"></i>
+                                                                        @endif
+																	</div>
+																	<div class="card-body">
+																		<h6><a href="{{url('content-file/'.$file->id)}}">{{$file->name}}</a></h6>
+                                                                        <p><a href="{{url('content-file/'.$file->id)}}">{{$file->category}}</a></p>
+																		<span>{{$file->size * 0.001}} kb</span>
+																	</div>
+																	<div class="card-footer">{{$file->created_at}}</div>
+																</div>
+															</div>
+                       
+                                                    
+                                                
+					
+                       
+						 @endif @endforeach @endif
+                    </div>
