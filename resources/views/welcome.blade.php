@@ -1,4 +1,13 @@
 @extends('layouts.main')
+@section('extracss')
+    <link href="{{asset('css/jquery.dataTables.min.css')}}" rel="stylesheet">
+
+@endsection
+@section('extrajs')
+      <script src="{{asset('js/jquery-1.10.2.min.js')}}"></script>
+  <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
+
+@endsection
 @php 
 $content = \App\Models\Content::all()->take(4);
 $flashnews = \App\Models\Content::all()->where('category','flash')->last();

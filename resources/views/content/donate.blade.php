@@ -1,5 +1,5 @@
-<div id="add_donation" class="modal custom-modal fade" role="dialog">
-					<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+<div id="add_beneficiary" class="modal custom-modal fade" role="dialog">
+					<div class="modal-dialog modal-dialog-centered modal-md" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
 								<h5 class="modal-title">CAPTURE NEW DONATION </h5>
@@ -15,37 +15,42 @@
                             
 
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-12">
                                  {{ Form::label('email', 'Donor  Name') }}
                                  {{ Form::text('ben_name','', array('class' => 'form-control input-sm')) }}
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-12">
                                  {{ Form::label('email', 'Donor  Email') }}
-                                 {{ Form::text('ben_name','', array('class' => 'form-control input-sm')) }}
+                                 {{ Form::email('ben_email','', array('class' => 'form-control input-sm')) }}
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                 {{ Form::label('email', 'Drop-Off  Date') }}
+                                 {{ Form::date('ben_date','', array('class' => 'form-control input-sm')) }}
                             </div>
 
                     
-                          <div class="form-group col-md-4">
-                                {{ Form::label('Donation Category ', '') }}
-                                   <select class="form-control input-sm" name="State" required="">
-                                     <option value="">Select State</option>
-                                       @if(!empty($dropdowns)) 
-                                        @foreach($dropdowns as $c)
-                                        @if($c->column_name == 'State')
-                                            <option>{{$c->item}}</option>                  
-                                        @endif
-                                        @endforeach
-                                        @endif                                      
-                                    </select>
-                            </div>    
+                              <div class="form-group col-md-12">
+                                    {{ Form::label('Perishable Goods ', '') }}
+                                       <select class="form-control input-sm" name="State" required="">
+                                         <option value="">Select State</option>
+                                           @if(!empty($dropdowns)) 
+                                            @foreach($dropdowns as $c)
+                                            @if($c->column_name == 'cooling')
+                                                <option>{{$c->item}}</option>                  
+                                            @endif
+                                            @endforeach
+                                            @endif                                      
+                                        </select>
+                                </div>    
 
 
           
 
                                 <div class="form-group col-md-12">
-                                {{ Form::label('email', 'Description') }}
-                                {{ Form::textarea('alt_ben_mobile_number','', array('class' => 'form-control input-sm','maxlength'=>'10')) }}
+                                {{ Form::label('email', 'Donation Description') }}
+                                {{ Form::textarea('ben_description','', array('class' => 'form-control input-sm','maxlength'=>'10' ,'rows'=>'2')) }}
                                </div>
 
                        

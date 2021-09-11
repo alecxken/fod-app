@@ -8,8 +8,11 @@ use App\Http\Controllers\UserController;
 
 use App\Http\Controllers\ContentController;
 
+use App\Http\Controllers\FoodbankController;
 
 use App\Http\Controllers\CompanyController;
+
+use App\Http\Controllers\SettingsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -61,6 +64,33 @@ Route::post('store_company',[CompanyController::class,'store'])->name('store-com
 Route::get('get-cashdis',[CompanyController::class,'cashdis'])->name('ngo.index');;
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('new-foodbank',[FoodbankController::class,'index']);
+
+Route::get('view-foodbank',[FoodbankController::class,'foodbank'])->name('foodbank.index');;;
+
+Route::post('store-foodbank',[FoodbankController::class,'store']);
+
+Route::get('drop-foodbank/{id}',[FoodbankController::class,'drop_food_bank']);
+
+Route::post('get-foodbank/{id}',[FoodbankController::class,'get_food_bank']);
+
+
+
+
+#Setting Routes Begins Here
+
+Route::get('dropdown-settings',[SettingsController::class,'dropdownsettings']);
+
+Route::post('store-dropdowns',[SettingsController::class,'storedropdowns']);
+
+Route::get('delete-dropdown/{id}',[SettingsController::class,'drop_delete']);
+
+Route::get('getdropdowns', [SettingsController::class, 'dropdownsindex'])->name('dropdowns.index');
+
+
+Route::get('get-column/{id}',[SettingsController::class,'getcolumns']);
 
 
 

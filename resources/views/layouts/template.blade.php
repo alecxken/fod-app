@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <meta name="description" content="Avrello Services">
+        <meta name="description" content="FD-BANK Services">
 
         <meta name="robots" content="noindex, nofollow">
      <title>FD-BANK Services</title>
@@ -40,7 +40,11 @@
  <link href="{{asset('myfiles/css/toastr.min.css')}}" rel="stylesheet"/>
         @yield('extracss')
 		
-		
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="myfiles/js/html5shiv.min.js"></script>
+			<script src="myfiles/js/respond.min.js"></script>
+		<![endif]-->
     </head>
 	
     <body>
