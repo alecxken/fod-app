@@ -22,6 +22,23 @@ class Foodbankcontroller extends Controller
 {
     //
 
+      public function partners()
+    {
+        $dropdowns = SiteDropdown::all();
+
+         $token = Token::Unique('food_banks','token',5);
+
+         $t = date("Y-M",strtotime("now"));
+
+         $token = strtoupper('NGO-'.$token.''.$t); 
+
+         $users = User::all();
+
+         $content = FoodBank::paginate(5);
+
+        return view('ourpartner',compact('dropdowns','token','users','content'));
+    }
+
   public function index()
     {
         $dropdowns = SiteDropdown::all();
@@ -46,7 +63,7 @@ class Foodbankcontroller extends Controller
 
             return '<div class="btn-group" role="group" aria-label="Basic example">
                        <button id="getEditProductData" class="btn btn-xs btn-success  label-sm  open-modalss" value="'.$faculties->id.'"><i class="fa fa-pencil"></i></button>
-                        <a href="/delete-ngo/'.$faculties->id.'" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i> </a>
+                        <a href="/drop-foodbank/'.$faculties->id.'" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i> </a>
                         <button type="button" class="btn btn-primary"><i class="fa fa-eye"></i> </button>
                     </div>';
         })->make(true);
@@ -86,7 +103,7 @@ class Foodbankcontroller extends Controller
                           {  
                                 if (!empty($media))
                                  {
-                                    $destinationPath = storage_path('files');
+                                    $destinationPath = public_path('files');
 
                                     $filename = time().'.'.$media->getClientOriginalExtension();
 

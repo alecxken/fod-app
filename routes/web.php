@@ -65,6 +65,8 @@ Route::get('get-cashdis',[CompanyController::class,'cashdis'])->name('ngo.index'
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('our-partners',[FoodbankController::class,'partners']);
+
 
 Route::get('new-foodbank',[FoodbankController::class,'index']);
 

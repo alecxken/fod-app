@@ -65,14 +65,11 @@
                         <li class="nav-item active">
                           <a class="nav-link" href="{{url('/')}}">About Us</a>
                         </li>
-                       
-              
-                       
-
+                                
     
                       
                         <li class="nav-item">
-                          <a class="nav-link" href="">Contact</a>
+                          <a class="nav-link" href="{{url('/our-partners')}}">Food Banks</a>
                         </li>
 
                           <li class="nav-item">
