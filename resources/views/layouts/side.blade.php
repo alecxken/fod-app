@@ -6,7 +6,7 @@
 								<span>Admin Menu</span>
 							</li>
 							<li class="active"> 
-								<a href="{{url('admin/home')}}" class="noti-dot "><i class="la la-home"></i> <span>Dashboard</span></a>
+								<a href="{{url('home')}}" class="noti-dot "><i class="la la-home"></i> <span>Dashboard</span></a>
 							</li>
 					
 						
@@ -15,13 +15,15 @@
 								<a href="#" ><i class="fa  fa-list-ul"></i> <span>Food Banks </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="{{url('new-foodbank')}}">Register New</a></li>
-								    <li>
-									  <a href="{{url('#')}}">Programs</a>
-									</li>
-									<li>
-										<a href="{{url('#')}}">Eumerators</a>
-									</li>
+								  
 
+								</ul>
+							</li>
+
+							 <li class="submenu">
+							<a href="#" ><i class="fa  fa-list-ul"></i> <span>Donations Module </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="{{url('new-donations')}}">New Donations</a></li>
 								</ul>
 							</li>
 
@@ -31,7 +33,7 @@
 							<li class="submenu">
 								<a href="#" ><i class="fa fa-files-o"></i> <span> Reports Portal </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="{{url('#')}}">Donations Report</a></li>
+									<li><a href="{{url('new-report-donors')}}">Donations Report</a></li>
 
 									<!-- <li><a href="{{url('admin/task')}}">View Documents</a></li>		
 

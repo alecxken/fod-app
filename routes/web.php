@@ -67,12 +67,38 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('our-partners',[FoodbankController::class,'partners']);
 
+Route::get('get-foodbank/{id}',[FoodbankController::class,'getfoodbank']);
+
+Route::get('gets-foodbank/{id}',[FoodbankController::class,'getdonationsa']);
+
+Route::get('new-donations',[FoodbankController::class,'getdonations']);
+
+Route::get('view-donationa',[FoodbankController::class,'donationa'])->name('donations.index');;;
+
+Route::post('update-donations',[FoodbankController::class,'updatedonations']);
+
+Route::get('new-report-donors',[FoodbankController::class,'getreportdonors']);
+
+Route::post('get-report',[FoodbankController::class,'getpostreport']);
+
+
+Route::get('receive-donation/{id}',[FoodbankController::class,'receivedonation']);
+
+Route::post('store_donation_foodbank',[FoodbankController::class,'newdonationsfoodbanks']);
+
 
 Route::get('new-foodbank',[FoodbankController::class,'index']);
 
 Route::get('view-foodbank',[FoodbankController::class,'foodbank'])->name('foodbank.index');;;
 
 Route::post('store-foodbank',[FoodbankController::class,'store']);
+
+Route::post('store_donation',[FoodbankController::class,'newdonations']);
+
+Route::post('get-food',[FoodbankController::class,'storefood']);
+
+
+
 
 Route::get('drop-foodbank/{id}',[FoodbankController::class,'drop_food_bank']);
 

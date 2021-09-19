@@ -1,24 +1,20 @@
-@extends('layouts.log')
+@extends('layouts.main')
 
 @section('content')
 
   <div class="az-column-signup-left">
-        <div>
-          <i class="typcn typcn-chart-bar-outline"></i>
-          <h1 class="az-logo">MY<span>-AGENT-</span>HUB</h1>
-          <h5>Admin Board &amp; Admin Signup Board</h5>
-          <p>Capture the requested details.</p>
-          <a href="#" class="btn btn-outline-indigo">Learn More</a>
-        </div>
+      
       </div><!-- az-column-signup-left -->
       <div class="az-column-signup">
-        <h1 class="az-logo">MY<span>AGENT-HUB</span></h1>
+     
         <div class="az-signup-header">
           <h2>Welcome </h2>
           <h4>Signup and only takes a minute.</h4>
 
               <form method="POST" action="{{ route('register') }}">
                         @csrf
+          
+
             <div class="form-group">
               <label>Firstname &amp; Lastname</label>
 
@@ -58,7 +54,7 @@
             </div>
         
                 
-            <button type="submit" class="btn btn-az-primary btn-block">Create Account</button>
+            <button type="submit" class="btn btn-success btn-block">Click To Create Account</button>
            <!-- row -->
           </form>
         </div><!-- az-signup-header -->

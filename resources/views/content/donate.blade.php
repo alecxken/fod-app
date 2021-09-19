@@ -17,18 +17,33 @@
 
                             <div class="form-group col-md-12">
                                  {{ Form::label('email', 'Donor  Name') }}
-                                 {{ Form::text('ben_name','', array('class' => 'form-control input-sm')) }}
+                                 {{ Form::text('donor_name','', array('class' => 'form-control input-sm')) }}
                             </div>
 
                             <div class="form-group col-md-12">
                                  {{ Form::label('email', 'Donor  Email') }}
-                                 {{ Form::email('ben_email','', array('class' => 'form-control input-sm')) }}
+                                 {{ Form::email('donor_email','', array('class' => 'form-control input-sm')) }}
                             </div>
 
                             <div class="form-group col-md-12">
                                  {{ Form::label('email', 'Drop-Off  Date') }}
-                                 {{ Form::date('ben_date','', array('class' => 'form-control input-sm')) }}
+                                 {{ Form::date('donation_date','', array('class' => 'form-control input-sm')) }}
                             </div>
+
+                                @php $locations = \App\models\FoodBank::all()->groupBy('location'); @endphp
+                              <div class="form-group col-md-12">
+                                    {{ Form::label('Your Closest Location ', '') }}
+                                       <select class="form-control input-sm" name="location" required="">
+                                         <option value="">Select State</option>
+                                           @if(!empty($locations)) 
+                                            @foreach($locations as $key => $loc)
+                                           
+                                                <option>{{$key}}</option>                  
+                                            
+                                            @endforeach
+                                            @endif                                      
+                                        </select>
+                                </div> 
 
                     
                               <div class="form-group col-md-12">
@@ -50,7 +65,7 @@
 
                                 <div class="form-group col-md-12">
                                 {{ Form::label('email', 'Donation Description') }}
-                                {{ Form::textarea('ben_description','', array('class' => 'form-control input-sm','maxlength'=>'10' ,'rows'=>'2')) }}
+                                {{ Form::textarea('description','', array('class' => 'form-control input-sm','maxlength'=>'10' ,'rows'=>'2')) }}
                                </div>
 
                        
@@ -73,4 +88,4 @@
 							</div>
 						</div>
 					</div>
-				</div>
+	

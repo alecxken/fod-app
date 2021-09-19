@@ -13,7 +13,8 @@ $content = \App\Models\Content::all()->take(4);
 $flashnews = \App\Models\Content::all()->where('category','flash')->last();
 $cover = \App\Models\Content::all()->where('category','cover')->last();
 $press = \App\Models\Content::all()->where('category','press')->take(3);
-
+$dropdowns = \App\Models\SiteDropdown::all();
+ 
 @endphp
 @section('flashnews')
 @if(!empty($flashnews))

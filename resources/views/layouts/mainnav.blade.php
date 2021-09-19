@@ -5,7 +5,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                   <ul class="navbar-top-left-menu">
                    
-                    <li class="nav-item">
+                 <!--    <li class="nav-item">
                       <a href="#" class="nav-link">Events</a>
                     </li>
                 <li class="nav-item">
@@ -13,18 +13,36 @@
                     </li>
                     <li class="nav-item">
                       <a href="#" class="nav-link">In the Press</a>
-                    </li> 
+                    </li>  -->
                   </ul>
                   <ul class="navbar-top-right-menu" >
+              
                     <li class="nav-item">
                       <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>
                     </li>
-                    <li class="nav-item">
-                      <a href="{{url('/home')}}" class="nav-link">Login</a>
-                    </li>
-                 {{--    <li class="nav-item">
-                      <a href="{{url('/home')}}" class="nav-link">Sign in</a>
-                    </li> --}}
+                    @auth
+                      <li class="nav-item">
+                        <a href="{{url('/my-home')}}" class="nav-link">{{Auth::user()->name}}</a>
+                      </li>  
+                       <li class="nav-item">
+                        <a href="{{ route('logout') }}"   onclick="event.preventDefault();    document.getElementById('logout-form').submit();"  class="nav-link">Sign Out</a>
+                      </li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                       @csrf
+                                   </form>
+                    @else 
+                     <li class="nav-item">
+                      <a href="{{url('/login')}}" class="nav-link">Login</a>
+                     </li>
+                     <li class="nav-item">
+                      <a href="{{url('/register')}}" class="nav-link">Register</a>
+                     </li> 
+                     
+                     @endif
+
+              
+                
+                  
                   </ul>
                 </div>
               </div>
@@ -79,7 +97,7 @@
                     </div>
                   </div>
                   <ul class="social-media">
-                    <li>
+                  <!--   <li>
                       <a href="#">
                         <i class="mdi mdi-facebook"></i>
                       </a>
@@ -93,7 +111,7 @@
                       <a href="#">
                         <i class="mdi mdi-twitter"></i>
                       </a>
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
               </div>
