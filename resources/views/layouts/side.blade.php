@@ -52,7 +52,8 @@
 
               <li><a href="{{url('create-order-party')}}" class="nav-sub-link">Ordering Party Settings</a></li>
 
-              <li><a href="{{url('create-client')}}" class="nav-sub-link">Client Management</a></li> -->
+               -->
+               <li><a href="{{url('news-upload')}}" class="nav-sub-link">Content Management</a></li>
 
                 <li><a href="{{url('dropdown-settings')}}" class="nav-sub-link">Dropdown Settings</a></li>
 

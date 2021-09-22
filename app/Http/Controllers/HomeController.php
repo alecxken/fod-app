@@ -143,7 +143,19 @@ class HomeController extends Controller
                  # code...
         
         //dd($val);
+$val = $user->hasRole(['Donor']);
 
+
+            if (!empty($val)) 
+            {
+
+                        $mydonations = Donation::all()->where('status','New')->where('donor',Auth::user()->name)->count();
+
+         $accepted = Donation::all()->where('status','Received')->where('donor',Auth::user()->name)->count();;
+
+         $pending = Donation::all()->where('status','Pending')->where('donor',Auth::user()->name)->count();
+                return view('my-home',compact('mydonations','accepted','pending'));
+            }
 
 
     return view('home',compact('donations','newdonations','clients','receiveddonations','pendingddonations','datas','org'));
