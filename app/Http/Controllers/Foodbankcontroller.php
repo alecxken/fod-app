@@ -290,6 +290,38 @@ class Foodbankcontroller extends Controller
 
             $COMPANY->save();
 
+             $check = User::where('email',$request->input('email'))->first();
+
+
+        if (empty($check))
+         {
+           
+                 
+          //Retreive all roles
+
+            // dd('ff');
+
+             ///de
+            $user = new User();
+
+            $user->name  = $request->input('name');
+
+            $user->email  = $request->input('email');
+
+            $user->password  = Hash::make('12345678');
+
+            $user->save();
+        
+                 $rol = Role::where('name', '=', 'FoodBank')->first();
+                 if(!empty($rol))
+                 {
+                     $user->assignRole($rol);
+                 }
+
+                
+
+         }
+
             return back()->with('status','Successfully Registered  '. $request->input('name').' ');
 
 

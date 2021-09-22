@@ -30,6 +30,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/my-home', [App\Http\Controllers\HomeController::class, 'indexhome'])->name('my-home');
 
 Route::get('getusersnow', [UserController::class, 'anyData'])->name('get.users');
 

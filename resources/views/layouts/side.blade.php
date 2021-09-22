@@ -10,7 +10,7 @@
 							</li>
 					
 						
-
+							@role('Admin')
 							 <li class="submenu">
 								<a href="#" ><i class="fa  fa-list-ul"></i> <span>Food Banks </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
@@ -19,6 +19,7 @@
 
 								</ul>
 							</li>
+							@endrole
 
 							 <li class="submenu">
 							<a href="#" ><i class="fa  fa-list-ul"></i> <span>Donations Module </span> <span class="menu-arrow"></span></a>
@@ -42,6 +43,7 @@
 								</ul>
 							</li>
 
+@role('Admin')
 								<li class="submenu">
 								<a href="#" ><i class="fa fa-cogs"></i> <span>General Settings</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
@@ -63,6 +65,7 @@
 								
 								</ul>
 							</li>
+							@endrole
 
 
 			
